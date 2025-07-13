@@ -24,6 +24,10 @@ const colorPalette = [
   { base: 'green',  bg: '#D1FEB6', border: '#4B991C' },
   { base: 'orange', bg: '#FFE2BF', border: '#D67F19' },
   { base: 'purple', bg: '#F3D6FD', border: '#681A83' },
+  { base: 'red', bg: '#FDDBDB', border: '#B10C0C'},
+  { base: 'teal', bg: '#D9FFF6', border: '#349A82'},
+  { base: 'indigo', bg: '#DCD7FF', border: '#211090'},
+  { base: 'deepGray', bg: '#E3E5F8', border: '#2A2D48'},
 ];
 
 const subjectColorMap = ref<Record<string, { bg: string; border: string }>>({});

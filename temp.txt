@@ -1,0 +1,4 @@
+{ "day_w": "MON", "time_from": "08:30", "time_to": "10:30", "subject_code": "CP353201", "subject_name_th": "Software Quality Assurance", "room_name_th": "SC6204", "section_type_th": "Lecture", "section_code": "1" },
+{ "day_w": "TUE", "time_from": "13:00", "time_to": "15:00", "subject_code": "CP353201", "subject_name_th": "Software Quality Assurance", "room_name_th": "SC9422", "section_type_th": "Lab", "section_code": "1" },
+{ "day_w": "WED", "time_from": "15:00", "time_to": "17:00", "subject_code": "CP352301", "subject_name_th": "Script Programming", "room_name_th": "SC6601B", "section_type_th": "Lecture", "section_code": "1" },
+  { "day_w": "WED", "time_from": "17:00", "time_to": "19:00", "subject_code": "CP352301", "subject_name_th": "Script Programming", "room_name_th": "SC6601B", "section_type_th": "Lab", "section_code": "1" },

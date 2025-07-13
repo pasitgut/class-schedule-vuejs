@@ -1,15 +1,15 @@
-// const gridConfig = () => {
-//   const gridColumnStart = {}
-//   const gridColumnEnd = {}
-//   const gridTemplateColumns = { 156: 'repeat(156, minmax(0, 1fr))' }
+const gridConfig = () => {
+  const gridColumnStart = {}
+  const gridColumnEnd = {}
+  const gridTemplateColumns = { 156: 'repeat(156, minmax(0, 1fr))' }
 
-//   for (let i = 14; i <= 158; i++) {
-//     gridColumnStart[i.toString()] = i.toString()
-//     gridColumnEnd[i.toString()] = i.toString()
-//   }
+  for (let i = 14; i <= 158; i++) {
+    gridColumnStart[i.toString()] = i.toString()
+    gridColumnEnd[i.toString()] = i.toString()
+  }
 
-//   return { gridTemplateColumns, gridColumnStart, gridColumnEnd }
-// }
+  return { gridTemplateColumns, gridColumnStart, gridColumnEnd }
+}
 
 /** @type {import('tailwindcss').Config} */
 export default {

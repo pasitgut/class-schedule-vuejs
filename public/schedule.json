@@ -1,12 +1,19 @@
 [
-  { "day_w": "MON", "time_from": "10:30", "time_to": "12:00", "subject_code": "SC403602", "subject_name_th": "NUMERICAL METHODS FOR COMPUTER SCIENCE", "room_name_th": "SC08", "section_type_th": "Lecture", "section_code": "1" },
-  { "day_w": "WED", "time_from": "10:30", "time_to": "12:00", "subject_code": "SC403602", "subject_name_th": "NUMERICAL METHODS FOR COMPUTER SCIENCE", "room_name_th": "SC8305", "section_type_th": "Lecture", "section_code": "1" },
-  { "day_w": "FRI", "time_from": "08:30", "time_to": "10:30", "subject_code": "CP353001", "subject_name_th": "Operating Systems", "room_name_th": "SC9226", "section_type_th": "Lab", "section_code": "1" },
-  { "day_w": "FRI", "time_from": "13:00", "time_to": "15:00", "subject_code": "CP353001", "subject_name_th": "Operating Systems", "room_name_th": "SC6201", "section_type_th": "Lecture", "section_code": "1" },
-  { "day_w": "FRI", "time_from": "16:00", "time_to": "19:00", "subject_code": "GE362785", "subject_name_th": "CREATIVE THINKING", "room_name_th": "-", "section_type_th": "Lecture", "section_code": "16" },
-  { "day_w": "TUE", "time_from": "15:00", "time_to": "17:00", "subject_code": "CP353002", "subject_name_th": "Software Design", "room_name_th": "SC9525", "section_type_th": "Lecture", "section_code": "1" },
-  { "day_w": "WED", "time_from": "13:00", "time_to": "15:00", "subject_code": "CP353002", "subject_name_th": "Software Design", "room_name_th": "SC9228", "section_type_th": "Lab", "section_code": "1" },
+  { "day_w": "MON", "time_from": "10:30", "time_to": "12:00", "subject_code": "SC403602", "subject_name_th": "NUMERICAL METHODS FOR COMPUTER SCIENCE", "room_name_th": "SC8305", "section_type_th": "Lecture", "section_code": "1" },
   { "day_w": "MON", "time_from": "12:30", "time_to": "14:30", "subject_code": "CP353003", "subject_name_th": "Artificial Intelligence", "room_name_th": "SC9226 or SC9227", "section_type_th": "Lecture", "section_code": "1" },
   { "day_w": "MON", "time_from": "14:30", "time_to": "16:30", "subject_code": "CP353003", "subject_name_th": "Artificial Intelligence", "room_name_th": "SC9226 or SC9227", "section_type_th": "Lab", "section_code": "1" },
-  { "day_w": "THU", "time_from": "13:00", "time_to": "15:00", "subject_code": "CP353761", "subject_name_th": "Seminar", "room_name_th": "SC9525", "section_type_th": "Lecture", "section_code": "1" }
-]
+  { "day_w": "TUE", "time_from": "09:00", "time_to": "12:00", "subject_code": "BS952261", "subject_name_th": "PRINCIPLES OF MANAGEMENT", "room_name_th": "BS1404", "section_type_th": "Lecture", "section_code": "1"}, 
+  
+  { "day_w": "TUE", "time_from": "15:00", "time_to": "17:00", "subject_code": "CP353002", "subject_name_th": "Software Design", "room_name_th": "SC9525", "section_type_th": "Lecture", "section_code": "1" },
+  { "day_w": "WED", "time_from": "10:30", "time_to": "12:00", "subject_code": "SC403602", "subject_name_th": "NUMERICAL METHODS FOR COMPUTER SCIENCE", "room_name_th": "SC8305", "section_type_th": "Lecture", "section_code": "1" },
+  { "day_w": "WED", "time_from": "13:00", "time_to": "15:00", "subject_code": "CP353002", "subject_name_th": "Software Design", "room_name_th": "SC9228", "section_type_th": "Lab", "section_code": "1" },
+  
+  { "day_w": "THU", "time_from": "13:00", "time_to": "15:00", "subject_code": "CP353761", "subject_name_th": "Seminar", "room_name_th": "SC9525", "section_type_th": "Lecture", "section_code": "1" },
+  { "day_w": "THU", "time_from": "15:00", "time_to": "17:00", "subject_code": "CP353301", "subject_name_th": "Internetworking", "room_name_th": "SC9524", "section_type_th": "Lecture", "section_code": "1"},
+  { "day_w": "THU", "time_from": "17:00", "time_to": "19:00", "subject_code": "CP353301", "subject_name_th": "Internetworking", "room_name_th": "SC9524 - Online", "section_type_th": "Lab", "section_code": "1"},
+  { "day_w": "FRI", "time_from": "10:30", "time_to": "12:30", "subject_code": "CP353001", "subject_name_th": "Operating Systems", "room_name_th": "SC9226", "section_type_th": "Lab", "section_code": "1" },
+  { "day_w": "FRI", "time_from": "13:00", "time_to": "15:00", "subject_code": "CP353001", "subject_name_th": "Operating Systems", "room_name_th": "SC6201", "section_type_th": "Lecture", "section_code": "1" },
+  { "day_w": "FRI", "time_from": "16:00", "time_to": "19:00", "subject_code": "GE362785", "subject_name_th": "CREATIVE THINKING", "room_name_th": "GL212", "section_type_th": "Lecture", "section_code": "16" }
+  ]
+
+
