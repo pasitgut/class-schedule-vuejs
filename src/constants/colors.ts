@@ -12,10 +12,10 @@ export const COLOR_PALETTE = [
 ];
 
 export const getSubjectColor = (subjectCode: string) => {
-    let hash = 0;
-    for (let i = 0; i < subjectCode.length; i++) {
-        hash = subjectCode.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    const index = Math.abs(hash) % COLOR_PALETTE.length;
-    return COLOR_PALETTE[index];
+    // let hash = 0;
+    // for (let i = 0; i < subjectCode.length; i++) {
+    //     hash = subjectCode.charCodeAt(i) + ((hash << 5) - hash);
+    // }
+    // const index = Math.abs(hash) % COLOR_PALETTE.length;
+    // return COLOR_PALETTE[index];
 }

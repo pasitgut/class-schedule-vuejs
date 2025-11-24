@@ -17,7 +17,7 @@ const courses = ref<Course[]>([]);
 const periodDate = ref("Semester 1/2025");
 
 // --- Composables ---
-const { config, headers, gridStyle, visibleDays, mappedCourses, getMaxRows } = useScheduleGrid(courses);
+const { config, headers, gridStyle, visibleDays, mappedCourses, getMaxRows, autoAdjustTimeRange } = useScheduleGrid(courses);
 
 // --- Modal State ---
 const showForm = ref(false);
@@ -33,6 +33,7 @@ const loadSchedule = async () => {
     if(!res.ok) throw new Error("No schedule file");
     const data = await res.json();
     courses.value = data.map((c: any) => ({ ...c, id: c.id || crypto.randomUUID() }));
+    autoAdjustTimeRange();
   } catch (e) {
     console.warn("Using empty schedule (or failed to load):", e);
     courses.value = [];
@@ -50,12 +51,17 @@ const handleSaveCourse = (courseData: Course) => {
   } else {
     courses.value.push({ ...courseData, id: crypto.randomUUID() });
   }
+
+  autoAdjustTimeRange();
   showForm.value = false;
 };
 
 const handleDeleteCourse = (id: string) => {
   if(confirm("Are you sure you want to delete this course?")) {
     courses.value = courses.value.filter(c => c.id !== id);
+    
+    autoAdjustTimeRange();
+
     showDetail.value = false;
   }
 };

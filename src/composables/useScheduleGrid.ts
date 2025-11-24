@@ -1,6 +1,6 @@
 import { ref, computed, type Ref } from 'vue';
 import type { Course, VisualCourse, ScheduleConfig } from '../types/schedule';
-import { getSubjectColor } from '../constants/colors';
+import { COLOR_PALETTE, getSubjectColor } from '../constants/colors';
 
 export function useScheduleGrid(courses: Ref<Course[]>) {
   const config = ref<ScheduleConfig>({ startHour: 8, endHour: 18 });
@@ -47,6 +47,17 @@ export function useScheduleGrid(courses: Ref<Course[]>) {
   const mappedCourses = computed(() => {
     const grouped: Record<string, VisualCourse[]> = {};
     
+    const subjectColorMap = new Map<string, any>();
+    let colorIndex = 0;
+
+    const getSequentialColor = (code: string) => {
+      if (!subjectColorMap.has(code)) {
+        const color = COLOR_PALETTE[colorIndex % COLOR_PALETTE.length];
+        subjectColorMap.set(code, color);
+        colorIndex++;
+      }
+      return subjectColorMap.get(code);
+    }
     // 1. แปลง Course เป็น VisualCourse (เพิ่มพิกัด Grid)
     courses.value.forEach(course => {
       const dayKey = course.day_w.trim().toUpperCase();
@@ -60,7 +71,7 @@ export function useScheduleGrid(courses: Ref<Course[]>) {
           startCol: startC,
           endCol: endC,
           stackIndex: 0,
-          color: getSubjectColor(course.subject_code)
+          color: getSequentialColor(course.subject_code)
         });
       }
     });
@@ -76,7 +87,7 @@ export function useScheduleGrid(courses: Ref<Course[]>) {
   const headers = computed(() => {
     const list = ["Day/Time"];
     for (let i = config.value.startHour; i <= config.value.endHour; i++) {
-      list.push(`${i}:00`);
+      list.push(`${i}:00 - ${i+1}:00`);
     }
     return list;
   });
@@ -100,7 +111,32 @@ export function useScheduleGrid(courses: Ref<Course[]>) {
     const dayCourses = mappedCourses.value[dayKey] || [];
     if (!dayCourses.length) return 1;
     return Math.max(...dayCourses.map(c => c.stackIndex)) + 1;
-  };
+  }; 
+
+  const autoAdjustTimeRange = () => {
+    if (courses.value.length === 0) return;
+
+    let minH = 24;
+    let maxH = 0;
+    
+    courses.value.forEach(c => {
+      const start = parseInt(c.time_from.split(':')[0]) || 8;
+      const endParts = c.time_to.split(":").map(Number);
+      let end = endParts[0] || 18;
+
+      if (endParts[1] > 0) {
+
+      } else {
+        end = end - 1;
+      }
+
+      if (start < minH) minH = start;
+      if (end > maxH) maxH = end;
+    });
+
+    config.value.startHour = Math.min(minH, 8);
+    config.value.endHour = Math.max(maxH, 16);
+  }
 
   return {
     config,
@@ -108,6 +144,7 @@ export function useScheduleGrid(courses: Ref<Course[]>) {
     gridStyle,
     visibleDays,
     mappedCourses,
-    getMaxRows
+    getMaxRows,
+    autoAdjustTimeRange,
   };
 }
