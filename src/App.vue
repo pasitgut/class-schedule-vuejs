@@ -1,24 +1,7 @@
-<script setup lang="ts">
-import SchedulePage from './pages/SchedulePage.vue';
+<script setup>
+import SchedulePage from "./views/SchedulePage.vue"
 </script>
 
 <template>
-  <div id="app" class="bg-white dark:bg-gray-900">
-    <SchedulePage />
-  </div>
+  <SchedulePage />
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
